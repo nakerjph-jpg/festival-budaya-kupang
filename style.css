@@ -1,0 +1,214 @@
+/* Festival Budaya Kupang 2027 — palet dari tenun ikat Amarasi:
+   biru tua (nila), merah-cokelat (akar mengkudu), kuning tua, putih kapur */
+:root {
+  --nila: #1d2a4d;
+  --nila-lembut: #2d3d6b;
+  --mengkudu: #8c2f1f;
+  --kuning: #c9962e;
+  --kapur: #f1f3f0;
+  --kapur-gelap: #e3e7e2;
+  --teks: #1b1f2a;
+  --teks-pudar: #4a5160;
+  --radius: 6px;
+  --maks: 1120px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+body {
+  margin: 0;
+  font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--teks);
+  background: var(--kapur);
+}
+img { max-width: 100%; display: block; }
+a { color: var(--mengkudu); }
+a:hover { color: var(--nila); }
+:focus-visible { outline: 3px solid var(--kuning); outline-offset: 3px; }
+
+h1, h2, h3, h4 {
+  font-family: "Young Serif", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 .6em;
+  color: var(--nila);
+}
+h1 { font-size: clamp(2.2rem, 6vw, 3.8rem); }
+h2 { font-size: clamp(1.6rem, 3.6vw, 2.3rem); }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.15rem; margin-bottom: .3em; }
+p { margin: 0 0 1em; }
+
+.wrap { width: min(100% - 2.5rem, var(--maks)); margin-inline: auto; }
+.narrow { max-width: 720px; }
+.section { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+.section.alt { background: var(--kapur-gelap); }
+.sub { max-width: 68ch; color: var(--teks-pudar); margin-bottom: 2rem; }
+.note { font-size: .9rem; color: var(--teks-pudar); font-style: italic; }
+
+/* Pita tenun (hiasan zig-zag) */
+.tenun {
+  height: 14px;
+  background:
+    linear-gradient(135deg, var(--mengkudu) 25%, transparent 25%) -10px 0 / 20px 14px,
+    linear-gradient(225deg, var(--mengkudu) 25%, transparent 25%) -10px 0 / 20px 14px,
+    linear-gradient(315deg, var(--kuning) 25%, transparent 25%) 0 0 / 20px 14px,
+    linear-gradient(45deg, var(--kuning) 25%, var(--nila) 25%) 0 0 / 20px 14px;
+}
+
+/* Header & menu */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--nila); color: #fff; }
+.header-row { display: flex; align-items: center; justify-content: space-between; min-height: 68px; }
+.brand { display: flex; align-items: center; gap: .75rem; color: #fff; text-decoration: none; }
+.brand-mark {
+  display: grid; place-items: center; width: 42px; height: 42px;
+  background: var(--mengkudu); border: 2px solid var(--kuning);
+  font-family: "Young Serif", Georgia, serif; font-size: .95rem; border-radius: 4px;
+}
+.brand-name { font-family: "Young Serif", Georgia, serif; font-size: 1.05rem; line-height: 1.2; }
+.brand-name b { color: var(--kuning); font-weight: 400; }
+
+.menu ul { list-style: none; margin: 0; padding: 0; display: flex; gap: .25rem; }
+.menu a {
+  display: block; padding: .6rem .9rem; color: #fff; text-decoration: none;
+  font-weight: 600; border-radius: var(--radius);
+}
+.menu a:hover, .menu a:focus-visible { background: var(--nila-lembut); color: var(--kuning); }
+
+.nav-toggle {
+  display: none; background: none; border: 2px solid rgba(255,255,255,.5);
+  border-radius: var(--radius); padding: .6rem .55rem; cursor: pointer;
+}
+.nav-toggle span { display: block; width: 22px; height: 2px; background: #fff; margin: 4px 0; transition: transform .2s, opacity .2s; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* Hero */
+.hero { background: var(--nila); color: #e8ebf3; padding: clamp(2.5rem, 7vw, 5rem) 0; }
+.hero h1 { color: #fff; }
+.hero .lead { font-size: 1.3rem; color: var(--kuning); font-weight: 700; }
+.hero .note { color: #b7c0d8; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(1.5rem, 5vw, 4rem); align-items: center; }
+.btn-row { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.5rem; }
+.btn {
+  display: inline-block; padding: .75rem 1.4rem; border-radius: var(--radius);
+  font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; border: 2px solid transparent;
+}
+.btn-solid { background: var(--mengkudu); color: #fff; border-color: var(--mengkudu); }
+.btn-solid:hover { background: #a63825; color: #fff; }
+.btn-line { border-color: var(--kuning); color: var(--kuning); }
+.btn-line:hover { background: var(--kuning); color: var(--nila); }
+
+/* Wadah foto — tetap rapi walau gambar belum ada */
+.ph { margin: 0; background: var(--nila-lembut); border-radius: var(--radius); overflow: hidden; }
+.ph img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; color: #cfd6ea; font-size: .85rem; }
+.ph figcaption { padding: .6rem .8rem; font-size: .88rem; color: var(--teks-pudar); background: #fff; }
+.hero-fig figcaption { background: rgba(0,0,0,.25); color: #dfe4f2; }
+
+/* Daftar centang */
+.check { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+.check li { position: relative; padding: .45rem 0 .45rem 1.9rem; border-bottom: 1px solid var(--kapur-gelap); }
+.check li::before {
+  content: ""; position: absolute; left: .2rem; top: 1.05rem; width: 10px; height: 10px;
+  background: var(--mengkudu); transform: rotate(45deg);
+}
+
+/* Angka */
+.stats { background: var(--mengkudu); color: #fff; padding: 3rem 0; }
+.stats h2 { color: #fff; }
+.stats .sub { color: #f3d9d2; margin-bottom: 1.5rem; }
+.stat-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin: 0; }
+.stat-row div { border-top: 3px solid var(--kuning); padding-top: .75rem; display: flex; flex-direction: column-reverse; }
+.stat-row dt { font-size: .95rem; color: #f3d9d2; }
+.stat-row dd { margin: 0; font-family: "Young Serif", Georgia, serif; font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.1; }
+
+/* Program */
+.program-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.program .ph { margin-bottom: 1rem; }
+.tag { display: inline-block; margin-bottom: .4rem; padding: .1rem .6rem; font-size: .85rem; font-weight: 700; color: var(--mengkudu); border: 1.5px solid var(--mengkudu); border-radius: 99px; }
+.more { font-weight: 700; }
+
+/* Galeri */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+/* Amarasi */
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
+.facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem 2.5rem; margin-bottom: 3rem; }
+.facts > div { border-left: 4px solid var(--kuning); padding-left: 1rem; }
+.facts h3 { margin-bottom: .3em; }
+.facts p { margin: 0; }
+.sub-title { margin-top: 1rem; }
+.food { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+.food article .ph { margin-bottom: .75rem; }
+.food p { margin: 0; font-size: .97rem; color: var(--teks-pudar); }
+.food .sambal { background: var(--nila); color: #e8ebf3; padding: 1.25rem; border-radius: var(--radius); align-self: start; }
+.food .sambal h4 { color: var(--kuning); }
+.food .sambal p { color: #e8ebf3; }
+
+/* Testimoni */
+.quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+blockquote { margin: 0; padding-left: 1.25rem; border-left: 4px solid var(--mengkudu); }
+blockquote p { font-family: "Young Serif", Georgia, serif; font-size: 1.1rem; line-height: 1.5; color: var(--nila); }
+blockquote footer { display: flex; align-items: center; gap: .75rem; font-weight: 700; line-height: 1.3; }
+blockquote small { font-weight: 400; color: var(--teks-pudar); }
+.avatar { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; background: var(--nila); color: #fff; font-size: .85rem; }
+
+/* Kontak */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+.contact-list dt { font-weight: 700; color: var(--nila); margin-top: 1rem; }
+.contact-list dd { margin: 0; }
+.form { background: #fff; padding: 1.75rem; border-radius: var(--radius); border-top: 6px solid var(--mengkudu); }
+.form label { display: block; font-weight: 700; margin: 0 0 .3rem; }
+.form input, .form textarea {
+  width: 100%; margin-bottom: 1rem; padding: .7rem .8rem; font: inherit;
+  border: 1.5px solid #b9c0cc; border-radius: var(--radius); background: var(--kapur);
+}
+.form input:focus, .form textarea:focus { outline: 3px solid var(--kuning); border-color: var(--nila); }
+.form-status { min-height: 1.5em; margin: 1rem 0 .25rem; font-weight: 700; color: var(--nila); }
+.form-status.error { color: var(--mengkudu); }
+.form .note { margin: 0; }
+
+/* Footer */
+.site-footer { background: var(--nila); color: #cfd6ea; }
+.site-footer h3 { color: #fff; font-size: 1.1rem; }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 2rem; padding: 2.5rem 0 1.5rem; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; }
+.site-footer li { margin-bottom: .3rem; }
+.site-footer a { color: var(--kuning); }
+.copy { text-align: center; font-size: .88rem; padding: 1rem 1.25rem 1.5rem; margin: 0; border-top: 1px solid rgba(255,255,255,.15); }
+
+/* Tablet */
+@media (max-width: 960px) {
+  .program-grid, .quotes { grid-template-columns: 1fr 1fr; }
+  .food { grid-template-columns: 1fr 1fr; }
+  .stat-row { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Ponsel: menu hamburger */
+@media (max-width: 760px) {
+  .nav-toggle { display: block; }
+  .menu {
+    position: absolute; left: 0; right: 0; top: 100%; background: var(--nila);
+    display: none; padding: .5rem 1.25rem 1rem; border-top: 1px solid rgba(255,255,255,.15);
+  }
+  .menu.open { display: block; }
+  .menu ul { flex-direction: column; }
+  .menu a { padding: .85rem .5rem; }
+  .brand-name { font-size: .95rem; }
+  .hero-grid, .contact-grid, .footer-grid, .facts { grid-template-columns: 1fr; }
+  .program-grid, .quotes, .gallery, .trio, .food { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 420px) {
+  .gallery { grid-template-columns: 1fr; }
+  .stat-row { grid-template-columns: 1fr 1fr; gap: 1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .nav-toggle span { transition: none; }
+}

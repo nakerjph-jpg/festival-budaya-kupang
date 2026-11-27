@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Situs profil simulasi Festival Budaya Kupang 2027 — perayaan seni, tenun ikat, dan kuliner Nusa Tenggara Timur. Tugas UTS Pemrograman Web.">
+  <title>Festival Budaya Kupang 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a href="#beranda" class="brand">
+        <span class="brand-mark">FBK</span>
+        <span class="brand-name">Festival Budaya Kupang <b>2027</b></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="menu" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="menu" class="menu" aria-label="Menu utama">
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#hubungi">Hubungi</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="tenun" aria-hidden="true"></div>
+  </header>
+
+  <main>
+
+    <!-- BERANDA -->
+    <section id="beranda" class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="note">Situs Profil Simulasi — Tugas UTS Pemrograman Web</p>
+          <h1>Festival Budaya Kupang 2027</h1>
+          <p class="lead">Merayakan Kekayaan Budaya Nusa Tenggara Timur</p>
+          <p>Tiga hari penuh warna di Kota Kupang: panggung tari tradisional, pameran tenun ikat, musik sasando, serta bazar kuliner khas Timor — perayaan yang menyatukan budaya dari seluruh penjuru NTT dalam satu ajakan besar.</p>
+          <div class="btn-row">
+            <a class="btn btn-solid" href="#tentang">Jelajahi Budaya</a>
+            <a class="btn btn-line" href="#program">Lihat Program</a>
+          </div>
+        </div>
+        <figure class="hero-fig ph">
+          <img src="assets/images/tari-likurai.jpg" alt="Pertunjukan Tari Likurai, tarian tradisional masyarakat Timor, NTT">
+          <figcaption>Tari Likurai — tarian tradisional masyarakat pesisir Timor</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section id="tentang" class="section">
+      <div class="wrap narrow">
+        <h2>Akar Budaya Timor, Panggung Generasi Muda</h2>
+        <p>Festival Budaya Kupang adalah perayaan tahunan yang bertujuan melestarikan dan memperkenalkan kekayaan budaya Nusa Tenggara Timur — dari tarian, kain tenun, alat musik, hingga kuliner khas Tanah Timor — kepada masyarakat luas.</p>
+        <p>Dalam tiga hari pelaksanaan, pengunjung dapat menonton pertunjukan seni, berkenalan langsung dengan para penenun, mencoba kuliner lokal, serta menikmati musik tradisional yang dimainkan secara langsung di berbagai sudut Kota Kupang. <em>(Seluruh detail pelaksanaan pada situs ini bersifat simulasi untuk keperluan tugas.)</em></p>
+        <ul class="check">
+          <li>Panggung tari Likurai dan tarian tradisional dari seluruh NTT</li>
+          <li>Pameran dan peragaan menenun kain Timor, Amarasi, dan Sumba</li>
+          <li>Musik sasando Rote yang dimainkan langsung oleh para seniman</li>
+          <li>Bazar kuliner: se'i, jagung bose, dan hidangan khas lainnya</li>
+          <li>Sorotan khusus <a href="#amarasi">adat Amarasi Barat</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ANGKA -->
+    <section class="stats" aria-labelledby="angka-judul">
+      <div class="wrap">
+        <h2 id="angka-judul">Festival dalam Angka</h2>
+        <p class="sub">Angka di bawah ini adalah data simulasi/contoh, bukan statistik resmi penyelenggara.</p>
+        <dl class="stat-row">
+          <div><dt>Pertunjukan seni &amp; tari</dt><dd>12+</dd></div>
+          <div><dt>Penenun &amp; perajin lokal</dt><dd>40+</dd></div>
+          <div><dt>Hari perayaan budaya</dt><dd>3</dd></div>
+          <div><dt>Target pengunjung</dt><dd>5.000+</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- PROGRAM -->
+    <section id="program" class="section">
+      <div class="wrap">
+        <h2>Tiga Program Utama</h2>
+        <p class="sub">Tiga rangkaian kegiatan yang menjadi jantung perayaan budaya ini.</p>
+        <div class="program-grid">
+          <article class="program">
+            <figure class="ph"><img src="assets/images/tari-likurai-2.jpg" alt="Penari tradisional Timor sedang menampilkan tarian"></figure>
+            <p class="tag">Pertunjukan</p>
+            <h3>Tari Tradisional</h3>
+            <p>Panggung utama pertunjukan tari dari seluruh NTT — dari Likurai yang lembut, tarian perang yang perkasa, hingga tarian penyambutan khas Timor yang penuh kehormatan.</p>
+            <a class="more" href="#hubungi">Info selengkapnya</a>
+          </article>
+          <article class="program">
+            <figure class="ph"><img src="assets/images/tenun-ikat.jpg" alt="Kain tenun ikat khas Nusa Tenggara Timur dengan motif warna-warni"></figure>
+            <p class="tag">Pameran</p>
+            <h3>Pameran Tenun Ikat</h3>
+            <p>Kain tenun Timor, Amarasi, dan Sumba dipamerkan bersama para penenunnya. Lihat proses pewarnaan alam dan pelajari makna motif pada setiap helai kain.</p>
+            <a class="more" href="#hubungi">Info selengkapnya</a>
+          </article>
+          <article class="program">
+            <figure class="ph"><img src="assets/images/sei-kupang.jpg" alt="Se'i, daging asap khas Kupang yang disajikan bersama nasi"></figure>
+            <p class="tag">Bazar</p>
+            <h3>Bazar Kuliner NTT</h3>
+            <p>Cita rasa khas Timor dalam satu tempat: se'i asap, jagung bose, kolo-kolo, dan hidangan laut segar dari teluk Kupang.</p>
+            <a class="more" href="#hubungi">Info selengkapnya</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERI -->
+    <section id="galeri" class="section alt">
+      <div class="wrap">
+        <h2>Sekilas Kekayaan NTT</h2>
+        <p class="sub">Enam potret budaya Nusa Tenggara Timur yang menjadi sumber inspirasi festival ini.</p>
+        <div class="gallery">
+          <figure class="ph"><img src="assets/images/sasando.jpg" alt="Alat musik sasando dari pulau Rote"><figcaption>Sasando — kecapi petik dari daun lontar asal Rote</figcaption></figure>
+          <figure class="ph"><img src="assets/images/tenun-ikat-2.jpg" alt="Kain tenun ikat Kodi dari Sumba, NTT"><figcaption>Tenun ikat Kodi dari Sumba</figcaption></figure>
+          <figure class="ph"><img src="assets/images/jagung-bose.jpg" alt="Jagung bose, sup jagung khas Timor"><figcaption>Jagung bose — sup jagung khas Timor</figcaption></figure>
+          <figure class="ph"><img src="assets/images/ume-kbubu.jpg" alt="Ume Kbubu, rumah adat masyarakat Timor"><figcaption>Ume Kbubu — rumah adat masyarakat Timor</figcaption></figure>
+          <figure class="ph"><img src="assets/images/pasola.jpg" alt="Pasola, tradisi perang berkuda khas Sumba"><figcaption>Pasola — tradisi perang berkuda khas Sumba</figcaption></figure>
+          <figure class="ph"><img src="assets/images/kota-kupang.png" alt="Panorama Kota Kupang dari udara"><figcaption>Panorama Kota Kupang dari udara</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- AMARASI -->
+    <section id="amarasi" class="section">
+      <div class="wrap">
+        <h2>Adat Amarasi Barat</h2>
+        <p class="sub">Amarasi Barat adalah kecamatan di Kabupaten Kupang dengan ibu kota Baun — wilayah bekas Kerajaan Amarasi yang dihuni masyarakat Atoni Pah Meto. Festival ini memberi ruang khusus untuk memperkenalkan adat dan tenun dari Amarasi.</p>
+
+        <div class="trio">
+          <figure class="ph"><img src="assets/images/amarasi-ikat.jpg" alt="Perempuan Amarasi sedang mengikat benang untuk tenun ikat"><figcaption>Teknik ikat benang di Amarasi, Timor</figcaption></figure>
+          <figure class="ph"><img src="assets/images/amarasi-pakaian-adat.jpg" alt="Seorang ayah dan putrinya mengenakan pakaian adat Amarasi di depan rumah beratap ilalang"><figcaption>Pakaian adat Amarasi: selimut, sarung tenun, dan perhiasan perak</figcaption></figure>
+          <figure class="ph"><img src="assets/images/amarasi-tokoh-adat.jpg" alt="Dua tokoh adat Amarasi berpakaian lengkap dengan hiasan kepala"><figcaption>Dua tokoh adat Amarasi dengan hiasan kepala dan kain tenun</figcaption></figure>
+        </div>
+
+        <div class="facts">
+          <div>
+            <h3>Tenun Ikat Amarasi</h3>
+            <p>Kain tenun dengan warna dasar merah-cokelat dan biru tua dari pewarna alam seperti akar mengkudu dan tarum (nila).</p>
+          </div>
+          <div>
+            <h3>Sonaf Amarasi</h3>
+            <p>Sonaf adalah istana atau rumah adat raja. Baun dikenal sebagai pusat bekas Kerajaan Amarasi.</p>
+          </div>
+          <div>
+            <h3>Bahasa Amarasi</h3>
+            <p>Masyarakat setempat bertutur dalam bahasa Amarasi, salah satu ragam bahasa Uab Meto (Dawan) di Timor Barat.</p>
+          </div>
+          <div>
+            <h3>Tradisi Natoni</h3>
+            <p>Tutur adat berbalas dalam bahasa kiasan yang dibawakan saat penyambutan tamu dan upacara adat masyarakat Atoni.</p>
+          </div>
+        </div>
+
+        <h3 class="sub-title">Makanan Khas di Meja Makan Amarasi</h3>
+        <p class="sub">Hidangan khas Timor yang akrab di keseharian dan acara adat masyarakat Amarasi.</p>
+        <div class="food">
+          <article>
+            <figure class="ph"><img src="assets/images/kuliner-sei-babi.jpg" alt="Se'i babi, daging asap khas Timor, disajikan dengan tumis sayur dan sambal"></figure>
+            <h4>Se'i Babi</h4>
+            <p>Daging asap khas Timor yang diasapi perlahan di atas bara kayu kosambi.</p>
+          </article>
+          <article>
+            <figure class="ph"><img src="assets/images/kuliner-jagung-bose.jpg" alt="Jagung bose, olahan jagung putih dan kacang khas Timor"></figure>
+            <h4>Jagung Bose</h4>
+            <p>Jagung putih tumbuk yang dimasak bersama kacang-kacangan hingga lembut.</p>
+          </article>
+          <article>
+            <figure class="ph"><img src="assets/images/kuliner-sei-sapi.jpg" alt="Se'i sapi berbumbu cabai di atas piring dengan alas kain bermotif"></figure>
+            <h4>Se'i Sapi</h4>
+            <p>Versi daging sapi, berbumbu cabai.</p>
+          </article>
+          <article class="sambal">
+            <h4>Lu'at</h4>
+            <p>Sambal khas Timor dari cabai rawit dan perasan jeruk nipis yang didiamkan hingga asam-pedas. Pendamping wajib se'i.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONI -->
+    <section class="section alt" aria-labelledby="testi-judul">
+      <div class="wrap">
+        <h2 id="testi-judul">Cerita Pengunjung &amp; Perajin</h2>
+        <p class="sub">Seluruh testimoni di bawah ini adalah data contoh (simulasi) untuk keperluan tugas.</p>
+        <div class="quotes">
+          <blockquote>
+            <p>“Suasananya hangat sekali. Dalam satu hari saya bisa menonton Likurai, belajar motif tenun, dan mencoba se'i.”</p>
+            <footer><span class="avatar">MF</span><span>Maria F. (contoh)<br><small>Pengunjung</small></span></footer>
+          </blockquote>
+          <blockquote>
+            <p>“Kami mendapat banyak pesanan baru setelah memamerkan kain tenun di festival ini.”</p>
+            <footer><span class="avatar">YB</span><span>Yohanes B. (contoh)<br><small>Perajin tenun</small></span></footer>
+          </blockquote>
+          <blockquote>
+            <p>“Musik sasando yang dimainkan langsung membawa suasana yang berbeda. Pasti datang lagi tahun depan.”</p>
+            <footer><span class="avatar">SL</span><span>Sara L. (contoh)<br><small>Wisatawan</small></span></footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- HUBUNGI -->
+    <section id="hubungi" class="section">
+      <div class="wrap contact-grid">
+        <div>
+          <h2>Hubungi Panitia Festival</h2>
+          <p>Tertarik berpartisipasi sebagai penari, penenun, atau pelaku usaha kuliner? Hubungi sekretariat panitia melalui kontak berikut.</p>
+          <dl class="contact-list">
+            <dt>Alamat sekretariat (contoh)</dt>
+            <dd>Jl. Contoh No. 123, Kota Kupang, Nusa Tenggara Timur</dd>
+            <dt>Email (contoh)</dt>
+            <dd>info@festivalbudayakupang.id</dd>
+            <dt>Telepon (contoh)</dt>
+            <dd>+62 812-3456-7890</dd>
+            <dt>Jam layanan (contoh)</dt>
+            <dd>Senin–Jumat, 09.00–17.00 WITA</dd>
+          </dl>
+        </div>
+        <form id="formKontak" class="form" action="#" method="post" novalidate>
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+          <label for="pesan">Pesan</label>
+          <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan Anda" required></textarea>
+          <button type="submit" class="btn btn-solid">Kirim pesan</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+          <p class="note">Formulir ini hanya tampilan HTML (latihan struktur form) dan tidak mengirim data ke server.</p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="tenun" aria-hidden="true"></div>
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Festival Budaya Kupang 2027</h3>
+        <p>Perayaan budaya tahunan yang menampilkan seni tari, tenun ikat, musik tradisional, dan kuliner Nusa Tenggara Timur. Situs ini adalah simulasi untuk tugas UTS Pemrograman Web — Universitas Citra Bangsa.</p>
+      </div>
+      <div>
+        <h3>Navigasi</h3>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#program">Program</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#hubungi">Hubungi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Kontak (contoh)</h3>
+        <ul>
+          <li>Kota Kupang, NTT</li>
+          <li><a href="mailto:info@festivalbudayakupang.id">info@festivalbudayakupang.id</a></li>
+          <li>+62 812-3456-7890</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copy">© 2027 Festival Budaya Kupang — situs simulasi untuk keperluan tugas UTS. Sumber foto dicantumkan di README.md.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
